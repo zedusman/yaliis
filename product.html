@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Detail Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" href="YA.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Prompt:ital,wght@0,700;1,100;1,200;1,400&display=swap" rel="stylesheet">
+
+  <!-- <style>
+    /* CSS styles for the product detail page */
+    .product-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .product-image {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .product-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-description {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .product-price {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-btn {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .product-btn:hover {
+      background-color: #45a049;
+    }
+  </style> -->
+</head>
+<header>
+    <nav>
+      <a href="YALIS.png" class="logo"><img src="YALIS.png" alt="Yaliis"></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+<body>
+
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="Image.jpeg" width="50%" id="ProductImg">
+                </div>
+</div>
+<div class="col-2">
+
+    <h1>Two Thousand VHS</h1>
+    <h4>$50.00</h4>
+    <select >
+        <button class="select-size-btn">Select Size</button>
+        <option>S</option>
+        <option>M</option>
+        <option>L</option>
+        <option>XL</option>
+    </select>
+    <input type="number" value="1">
+    <a href="" class="btn">Add to cart</a>
+    <h3>Product details <i class="fa fa-indent" ></i></h3>
+    <br>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit porro iure <br> quibusdam. Praesentium, doloremque. Perspiciatis itaque nihil modi nemo architecto fuga molestias molestiae! Repellendus ipsa dolorem, molestias blanditiis provident natus?</p>
+</div>
+</div>
+</div>
+
+<script>
+    // JavaScript code to populate product details dynamically
+    var products = [
+      {
+        image: "Image.jpeg",
+        title: "Product 1",
+        description: "Product 1 description goes here.",
+        price: "$19.99"
+      },
+      {
+        image: "Image(2).jpeg",
+        title: "Product 2",
+        description: "Product 2 description goes here.",
+        price: "$29.99"
+      },
+      {
+        image: "Image(3).jpeg",
+        title: "Product 3",
+        description: "Product 3 description goes here.",
+        price: "$39.99"
+      }
+      // Add more products as needed
+    ];
+
+    // Function to populate the product detail based on the given index
+    function populateProductDetail(index) {
+      var productContainer = document.querySelector(".product-container");
+      var productImage = productContainer.querySelector(".product-image");
+      var productTitle = productContainer.querySelector(".product-title");
+      var productDescription = productContainer.querySelector(".product-description");
+      var productPrice = productContainer.querySelector(".product-price");
+
+      productImage.src = products[index].image;
+      productTitle.textContent = products[index].title;
+      productDescription.textContent = products[index].description;
+      productPrice.textContent = products[index].price;
+    }
+
+    // Call the function to populate the product detail based on the desired index
+    populateProductDetail(1); // Change the index to display different products
+  </script>
+
+
+
+
+
+
+
+  <script src="https://kit.fontawesome.com/78dd0bcd51.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<footer class="footer">
+    <img src="YALIS.png" alt="">
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a></li>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+          <ion-icon name="logo-snapchat"></ion-icon>
+        </a></li>
+    </ul>
+    <ul class="menu">
+      <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Shop</a></li>
+      <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+  
+    </ul>
+    <p>&copy; Z-Digital Solutions | All Rights Reserved</p>
+  </footer>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
