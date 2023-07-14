@@ -62,7 +62,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="shop.html">Shop</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -86,7 +86,7 @@
         <option>XL</option>
     </select>
     <input type="number" value="1">
-    <a href="" class="btn">Add to cart</a>
+    <a href="" class="btn">Buy now</a>
     <h3>Product details <i class="fa fa-indent" ></i></h3>
     <br>
 
@@ -95,47 +95,8 @@
 </div>
 </div>
 
-<script>
-    // JavaScript code to populate product details dynamically
-    var products = [
-      {
-        image: "Image.jpeg",
-        title: "Product 1",
-        description: "Product 1 description goes here.",
-        price: "$19.99"
-      },
-      {
-        image: "Image (3).jpeg",
-        title: "Product 2",
-        description: "Product 2 description goes here.",
-        price: "$29.99"
-      },
-      {
-        image: "",
-        title: "Product 3",
-        description: "Product 3 description goes here.",
-        price: "$39.99"
-      }
-      // Add more products as needed
-    ];
 
-    // Function to populate the product detail based on the given index
-    function populateProductDetail(index) {
-      var productContainer = document.querySelector(".product-container");
-      var productImage = productContainer.querySelector(".product-image");
-      var productTitle = productContainer.querySelector(".product-title");
-      var productDescription = productContainer.querySelector(".product-description");
-      var productPrice = productContainer.querySelector(".product-price");
 
-      productImage.src = products[index].image;
-      productTitle.textContent = products[index].title;
-      productDescription.textContent = products[index].description;
-      productPrice.textContent = products[index].price;
-    }
-
-    // Call the function to populate the product detail based on the desired index
-    populateProductDetail(0); // Change the index to display different products
-  </script>
 
 
 
@@ -162,7 +123,7 @@
     <ul class="menu">
       <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
       <li class="menu__item"><a class="menu__link" href="#">Shop</a></li>
-      <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+      <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
   
     </ul>
     <p>&copy; Z-Digital Solutions | All Rights Reserved</p>

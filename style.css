@@ -26,6 +26,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
   
   nav ul {
@@ -35,6 +36,7 @@
   nav ul li {
     display: inline-block;
     margin-left: 10px;
+    margin-bottom: 10px;
   }
   
   nav ul li a {
@@ -430,16 +432,14 @@ nav a img {
   padding-left: 10px;
   font-size: 20px;
   margin-right: 10px;
-  border: 1px solid #16537e;
+  border: 1px solid #b38a28;
 }
 input:focus{
   outline: none;
-
-
 }
 
 .single-product.fa{
-  color: #16537e;
+  color: #b38a28;
   margin-left: 10px;
   
 }
@@ -479,8 +479,8 @@ input:focus{
 }
 .btn {
   display: inline-block;
-  display: #16537e;
-  color: #fff;
+  display: #000;
+  color: #000;
   background: #16537e;
   padding: 8px 30px;
   margin: 30px 0;
@@ -488,7 +488,7 @@ input:focus{
   transition: backgroung 0.5s;
 }
 .btn:hover{
-  background: rgb(167, 14, 14);;
+  background: #b38a28;
 }
 .row-2{
   justify-content: space-between;
@@ -505,6 +505,8 @@ input:focus{
 } 
 /* single product page ends */
   
+/* gallery section starts here  */
+
 /* gallery section starts here  */
 
 .gallery .galleryContainer {
@@ -528,7 +530,7 @@ input:focus{
   display: block;
   transition: 0.4s;
 }
-.gallery .galleryContainer .title{
+.gallery .galleryContainer .galleryTitle{
   position: absolute;
   background-color: var(--gray);
   padding: 5px;
@@ -541,9 +543,240 @@ input:focus{
   transition: 0.4s;
 }
 
-.gallery .galleryContainer .item:hover .title{
+.gallery .galleryContainer .galleryTitle:hover .galleryTitle{
   opacity: 1;
 }
 .gallery .galleryContainer .item:hover img{
   transform: scale(1.2)
 } 
+
+/* contact page starts */
+.contact{
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(YA.png);
+  background-size: cover;
+}
+.contact .content {
+  max-width: 800px;
+  text-align: center;
+}
+.contact .content h2{
+  font-size: 36px;
+  font-weight: 500;
+  color: #b38a28;
+}
+.contact .content p{
+  font-weight: 300;
+  color: #b38a28;
+}
+.contactContainer{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.contactContainer .contactInfo{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactContainer .contactInfo .box{
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+.contactContainer .contactInfo .box .icon{
+  min-width: 60px;
+  height: 60px;
+  background: #b38a28;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+}
+.contactContainer .contactInfo .box .text{
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #b38a28;
+  flex-direction: column;
+  font-weight: 300;
+}
+.contactContainer .contactInfo .box .text h3{
+  font-weight: 500;
+  color: #666;
+}
+.contactForm{
+  position: center;
+  width: 40%;
+  padding: 40px;
+  background-color: #b38a28;
+}
+.contactForm h2{
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+}
+.contactForm .inputBox{
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+.contactForm .inputBox input
+.contactForm .inputBox textarea{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0 ;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contactForm .inputBox span{
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0 ;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+.contactForm .inputBox input:focus~ span,
+.contactForm .inputBox input:valid~ span,
+.contactForm .inputBox textarea:focus~ span,
+.contactForm .inputBox textarea:valid~ span{
+  color: #666;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+.contactForm .inputBox input [type="submit"] {
+  width: 100px;
+  background: #00bcd4;
+  cursor:pointer;
+  boarder: none;
+  color: #fff;
+  padding: 10px;
+  font-size: 18px; 
+}
+
+@media (max-width:991px){
+  .contact{
+    padding: 50px;
+  }
+  .contactContainer{
+    flex-direction:column ;
+  }
+  .contactContainer .contactInfo{
+    margin-bottom: 40px;
+  }
+  .contactContainer .contactInfo, .contactForm{
+    width: 100%;
+  }
+}
+/* contact page starts */
+
+/* new shop style */
+.container{
+  width: 80vw;
+  height:80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.header{
+  width: 100%;
+  text-align: center;
+}
+.header h1{
+  font-size: 4em;
+  text-transform: uppercase;
+  color: #b38a28;
+}
+.products{
+  width: 100%;
+  align-self: center;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.product{
+  position: relative;
+  background-color: #b38a28;
+  width: 350px;
+  height: 100%;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 20px 40px;
+  border-radius: 10px;
+  transition: .3s;
+}
+.product:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+.image{
+  width:100%;
+  height: 60%;
+  display: grid;
+  place-content: center;
+}
+.image img{
+  width: 240px;
+}
+.namePrice{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.namePrice h3{
+  font-size: 2em;
+  text-transform: capitalize;
+  color: #000;
+}
+.namePrice span{
+  font-size: 1.5em;
+  color: #000;
+}
+.product p{
+  font-size: 18px;
+  line-height: 25px;
+}
+.stars svg{
+  font-size: 1.3em;
+  color: var(--starColor);
+}
+.bay{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.bay button{
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: none;
+  background-color: #b38a28;
+  color: #000;
+  font-size: 18px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: .5s;
+}
+.bay button:hover{
+  transform: scale(1.1);
+}
