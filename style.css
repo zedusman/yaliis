@@ -85,9 +85,8 @@ nav a img {
     text-align: center;
     background-color: #b38a28;
     background-size: cover;
-    background-image: url(Image.jpeg);
+    background-image: url('Image.jpeg');
     height: 100vh;
-    
     overflow: hidden;
     position: relative;
     align-items: center;
@@ -102,6 +101,23 @@ nav a img {
     color: #000;
     margin-bottom: 40px;
   }
+
+
+  /* Optional: Add styles to center the play button and keep it visible on mobile */
+.videoPlayer::cue {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Optional: Style the play button icon */
+
+
   /* intro section starts here */
   
   /* Why Choose Us section styles */
@@ -713,11 +729,12 @@ input:focus{
   flex-wrap: wrap;
   gap: 40px;
 }
-.product{
+/* Default styles for the product div */
+.product {
   position: relative;
   background-color: #b38a28;
   width: 350px;
-  height: 100%;
+  height: 75%;
   box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
   display: flex;
   flex-direction: column;
@@ -726,6 +743,17 @@ input:focus{
   border-radius: 10px;
   transition: .3s;
 }
+
+/* Media query for mobile devices with a maximum screen width of 768 pixels */
+@media (max-width: 768px) {
+  .product {
+    width: 175px; /* 50% of the original width */
+    /* You can adjust other styles as needed for the smaller size */
+    padding: 10px; /* Example: reduce the padding for a smaller product */
+    font-size: 14px; /* Example: adjust the font size for better readability */
+  }
+}
+
 .product:hover{
   transform: translateY(-15px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
@@ -780,3 +808,57 @@ input:focus{
 .bay button:hover{
   transform: scale(1.1);
 }
+
+
+/* moblibe edit  */
+/* Add styles for the video container */
+/* Add styles for the video container */
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Add styles for the video container */
+.video-container {
+  max-width: 100%; /* Set the maximum width of the video container */
+  margin: 0 auto; /* Center the video container on the page */
+  overflow: hidden; /* Prevent the video from overflowing the container */
+}
+
+/* Adjust the size and aspect ratio of the video */
+.styled-video {
+  width: 100%; /* Set the width of the video to 100% of its container */
+  height: auto; /* Maintain the aspect ratio of the video */
+  max-width: 600px; /* Set a maximum width for the video */
+}
+
+/* Optional: Set the video to landscape mode for small screens */
+@media screen and (max-width: 768px) {
+  .styled-video {
+    width: 100%; /* Set the width to 100% for small screens */
+    height: auto; /* Allow the height to adjust based on the width */
+  }
+}
+/* Add styles for the video container */
+.video-container {
+  max-width: 100%; /* Set the maximum width of the video container */
+  margin: 0 auto; /* Center the video container on the page */
+  overflow: hidden; /* Prevent the video from overflowing the container */
+}
+
+/* Adjust the size and aspect ratio of the video */
+.hero-video {
+  width: 100%; /* Set the width of the video to 100% of its container */
+  height: auto; /* Maintain the aspect ratio of the video */
+  max-width: 600px; /* Set a maximum width for the video */
+}
+
+/* Optional: Set the video to landscape mode for larger screens */
+@media screen and (min-width: 768px) {
+  .hero-video {
+    width: 100%; /* Set the width to 100% for larger screens */
+    height: auto; /* Allow the height to adjust based on the width */
+  }
+}
+
